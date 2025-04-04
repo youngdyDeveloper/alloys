@@ -1,0 +1,29 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars($_POST["name"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $subject = htmlspecialchars($_POST["subject"]);
+    $message = htmlspecialchars($_POST["message"]);
+    
+    $to = "ndossdavid8@gmail.com";  // Replace with your email
+    $headers = "From: $email" . "\r\n" .
+               "Reply-To: $email" . "\r\n" .
+               "Content-Type: text/plain; charset=UTF-8";
+    
+    $fullMessage = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+    
+    if (mail($to, $subject, $fullMessage, $headers)) {
+       echo ' <script>
+        alert("Message sent successfully!");
+        </script>';
+    } else {
+        echo "Failed to send message.";
+    }
+} else {
+<<<<<<< Updated upstream
+    echo "Invalid requesttg6y!";
+=======
+    echo "Invalid request!";
+>>>>>>> Stashed changes
+}
+?>

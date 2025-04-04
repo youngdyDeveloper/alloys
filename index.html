@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/hover/hover.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Responsive css -->
+  <link href="css/responsive.css" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.png">
+
+  <!-- =======================================================
+    Theme Name: Folio
+    Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/main.js"></script>
+
+</head>
+ <script>
+$(document).ready(function() {
+    $("#whatsappForm").submit(function(e) {
+        e.preventDefault(); // Prevent form submission
+
+        var name = $("#name").val().trim();
+        var email = $("#email").val().trim();
+        var subject = $("#subject").val().trim();
+        var message = $("#message").val().trim();
+
+        if (name === "" || email === "" || subject === "" || message === "") {
+            $("#errormessage").text("Tafadhali jaza sehemu zote!").show();
+            return;
+        }
+
+        // Construct message and encode it
+        var whatsappMessage = "Name: " + name + "\n" +
+                              "Email: " + email + "\n" +
+                              "Subject: " + subject + "\n" +
+                              "Message: " + message;
+
+        var encodedMessage = encodeURIComponent(whatsappMessage);
+        var whatsappUrl = "https://wa.me/255766122648?text=" + encodedMessage;
+
+        // Open WhatsApp with the encoded message
+        window.open(whatsappUrl, "_blank");
+
+        // Show success message
+        $("#sendmessage").show();
+    });
+});
+
+    </script>
+<body>
+
+  <!-- start section navbar -->
+  <nav id="main-nav">
+    <div class="row">
+      <div class="container">
+
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+
+        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+        <ul class="nav-menu list-unstyled">
+          <li><a href="#header" class="smoothScroll">Home</a></li>
+          <li><a href="#about" class="smoothScroll">About</a></li>
+          <li><a href="#portfolio" class="smoothScroll">Products</a></li>
+          <li><a href="#journal" class="smoothScroll">Ourservices</a></li>
+          <li><a href="#contact" class="smoothScroll">Contact</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- End section navbar -->
+
+
+  <!-- start section header -->
+  <div id="header" class="home">
+
+    <div class="container">
+      <div class="header-content">
+        <h3>Welding Alloys Ltd. <span class="typed"></span></h3>
+        <p>One stop for welding</p>
+
+        <ul class="list-unstyled list-social">
+          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+          <!-- <li><a href="#"><i class="ion-social-twitter"></i></a></li> -->
+          <li><a href="https://www.instagram.com/weldingalloystz?igsh=Nnk1MnMyb2pmcDRx"><i class="ion-social-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End section header -->
+
+
+  <!-- start section about us -->
+  <div id="about" class="paddsection">
+    <div class="container">
+      <div class="row justify-content-between">
+
+        <div class="col-lg-4 ">
+          <div class="div-img-bg">
+            <div class="about-img">
+              <img src="images/welding.avif" class="img-responsive" alt="abou ust">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="about-descr">
+
+            <p class="p-heading">We are one of the leading premium supplier of high-qualityWelding Solutions & Equipment across EAST AFRICA. </p>
+            <p class="separator">Our team have vast and extensive experience within multipleportfolios and are leaders in Supply Chain and Sourcingactivities across various industries. 
+              We considers themselvesas heir clients’ strategic sourcing partner, and can supply themall types of materials, services and consulting.
+Sourcing is crucial in any industry; proficient skills & technicalexpertise in this field are essential to procuring the rightproducts, 
+at the right cost, and at the right time.Welding alloys is here to provide these highly sought afterskills.</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section about us -->
+
+
+  <!-- start section services -->
+  <!-- <div id="services">
+    <div class="container">
+
+        <div class="services-carousel owl-theme">
+
+          <div class="services-block">
+
+            <i class="ion-ios-browsers-outline"></i>
+            <span>UI/UX DESIGN</span>
+            <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-lightbulb-outline"></i>
+            <span>BRAND IDENTITY</span>
+            <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-color-wand-outline"></i>
+            <span>WEB DESIGN</span>
+            <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-social-android-outline"></i>
+            <span>MOBILE APPS</span>
+            <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-analytics-outline"></i>
+            <span>Analytics</span>
+            <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+          </div>
+
+          <div class="services-block">
+
+            <i class="ion-ios-camera-outline"></i>
+            <span>PHOTOGRAPHY</span>
+            <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+
+          </div>
+
+        </div>
+
+    </div>
+
+  </div> -->
+  <!-- end section services -->
+        <center>
+
+  <div id="journal">
+     
+    <div class="container">
+        <h2>Company List</h2>
+        <table id="companyTable">
+            <thead>
+                <tr>
+                    <th class="red">Category</th>
+                    <th>Company Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here via JavaScript -->
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button id="prevPage">Previous</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage" style="background-color:blue; color:white; width:90px;">Next</button>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+
+</center>
+  <!-- start section portfolio -->
+  <div id="portfolio" class="text-center paddsection">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Our Products</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="portfolio-list">
+
+             <ul class="nav list-unstyled" id="portfolio-flters">
+              <!-- <li class="filter filter-active" data-filter=".all">all</li>
+              <li class="filter" data-filter=".branding">branding</li>
+              <li class="filter" data-filter=".mockups">mockups</li> -->
+             <li><a href="gallery/consumables.html" class="smoothScroll">Welding Electrodes</a></li>
+          <li><a href="gallery/gaswelding.html" class="smoothScroll">Welding & Cutting</a></li>
+          <li><a href="gallery/tools.html" class="smoothScroll">Power & Hand tools</a></li>
+          
+            </ul> 
+
+          </div>
+
+          <div class="portfolio-container">
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits webdesign">
+              <!-- <a class="popup-img" href="images/portfolio/1.jpg"> -->
+                <a href="gallery/consumables.html">
+                <img src="images/portfolio/1.jpg" alt="img">
+                <div class="overlay">Consumables</div>
+              </a>
+            </div>
+
+              <div class="col-lg-4 col-md-6 portfolio-thumbnail all mockups webdesign photography">
+              <!-- <a class="popup-img" href="images/portfolio/4.jpg"> -->
+                <a href="gallery/gaswelding.html">
+                <img src="images/portfolio/4.jpg" alt="img">
+                <div class="overlay">Gaswelding & Cutting</div>
+
+              </a>
+            </div>
+
+           
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding webdesig photographyn">
+              <!-- <a class="#popup-img" href="images/portfolio/3.jpg"> -->
+                <a href="gallery/archwelding.html">
+                <img src="images/portfolio/3.jpg" alt="img">
+                <div class="overlay">Arch Welding Equipments</div>
+              </a>
+            </div>
+
+           <div class="col-lg-4 col-md-6 portfolio-thumbnail all mockups uikits photography">
+              <!-- <a class="popup-img" href="images/portfolio/2.jpg"> -->
+                <a href="gallery/grinding.html">
+                <img src="images/portfolio/2.jpg"  alt="img">
+                <div class="overlay overlay2">Grinding Machines</div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding uikits photography">
+              <!-- <a class="popup-img" href="images/portfolio/5.jpg"> -->
+                <a href="gallery/tools.html">
+                <img src="images/portfolio/5.jpg" alt="img">
+                <div class="overlay">Hand Tools</div>
+
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mockups uikits webdesign">
+              <!-- <a class="popup-img" href="images/portfolio/6.jpg"> -->
+                <a href="gallery/power.html">
+                <img src="images/portfolio/6.jpg" alt="img">
+                <div class="overlay">Power Tools</div>
+
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <center>
+  <table>
+  <tr>
+    <th colspan="3">Machines & Gas Welding & Cutting Equipment</th>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td>WELDING AND CUTTING OUTFITS</td>
+    <td>SINGLE AND MULTI STATE REGULATORS</td>
+    <td>SPARE PRESSURE GUAGES</td>
+  </tr>
+  <tr>
+    <td>CUTTING AND BRAZING TORCHES</td>
+    <td>ANM AND PNM CUTTING NOZZLES</td>
+    <td>FLASH BACK ARRESTERS</td>
+  </tr>
+  <tr>
+    <td>ALL FITTINGS & ACCESSORIES</td>
+    <td>TIG TORCH AND OTHER ACCESSORIES</td>
+    <td>PICKLING AND PASSIVATING PASTE</td>
+  </tr>
+  <tr>
+    <td>WELDING GLASS DARK AND CLEAR</td>
+    <td>ELECTRODE QUIVER SMALL</td>
+    <td>LEATHER APRON & HAND SLEEVES</td>
+  </tr>
+  <tr>
+    <td>WELDING & CUTTING NOZZLES</td>
+    <td>FLASH BACK ARRESTOR</td>
+    <td>WELDING CABLES</td>
+  </tr>
+  <tr>
+    <td>OXYGEN & ACETYLENE REGULATORS</td>
+    <td>TWIN & SINGLE HOSE PIPES</td>
+    <td>DYE DEVELOPER</td>
+  </tr>
+  <tr>
+    <td>HAND & HEADSHIELD</td>
+    <td>WELDING GLOVES</td>
+    <td>TIG WELDING MACHINE</td>
+  </tr>
+  <tr>
+    <td>MIG WELDING MACHINE & ACCESSORIES</td>
+    <td>CUTTING TORCH AND ACCESSORIES</td>
+    <td>CUTTING & GRINDING DISC</td>
+  </tr>
+  <tr>
+    <th colspan="3">GENERAL HARDWARE & EQUIPMENTS</th>
+  </tr>
+  <tr>
+    <td>HAND TOOLS</td>
+    <td>FILES & HAMMERS</td>
+    <td>KNIVES & BLADES</td>
+  </tr>
+  <tr>
+    <td>SCREWDRIVERS, SPANNERS,</td>
+    <td>WRENCH MEASURES & LEVELS</td>
+    <td>SOCKETS, TOOL & SOCKET SETS</td>
+  </tr>
+  <tr>
+    <td>IMPACT DRILL & WRENCH, ANGLE GRINDER</td>
+    <td>CHAINSAW PNEUMATIC TORQUE WRENCH</td>
+    <td>DRILL MACHINES, JIGSAW MACHINE etc</td>
+  </tr>
+  <tr>
+    <th colspan="3">SAFETY & WORKWEAR SOLUTIONS</th>
+  </tr>
+  <tr>
+    <td>PROTECTIVE APPAREL</td>
+    <td>SAFETY HELMETS</td>
+    <td>DUST MASK & RESPIRATORY MASK</td>
+  </tr>
+  <tr>
+    <td>PROTECTIVE EYEWEAR</td>
+    <td>SAFETY SHOES, SAFETY HARNESS</td>
+    <td>HEARING PROTECTION.</td>
+  </tr>
+  <tr>
+    <td style="color:red;">SAFETY AND FIRE PROTECTION</td>
+    <td style="color:red;">OIL AND GAS EQUIPMENTS</td>
+    <td style="color:red;">BUILDING MATERIALS TOOLS & ELECTRICALS ITEMS</td>
+  </tr>
+</table><BR>
+<h4>Our customer base includes industries from all segments such as:<br>
+SUGAR, STEEL AND MILLING, MINING & MINERAL PROCESSING, LOAD AND HAUL, STORAGE & WAREHOUSING, LOGISTICS INDUSTRY, FOOD AND BEVERAGE,  CEMNT INDUSTRY, ETC.</h4>
+  <!-- End section portfolio -->
+
+
+  <!-- start section journal -->
+  <!-- <div id="journal" class="text-left paddsection">
+
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>journal</h2>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="journal-block">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="journal-info">
+
+              <a href="blog-single.html"><img src="images/blog-post-1.jpg" class="img-responsive" alt="img"></a>
+
+              <div class="journal-txt">
+
+                <h4><a href="blog-single.html">SO LETS MAKE THE MOST IS BEAUTIFUL</a></h4>
+                <p class="separator">To an English person, it will seem like simplified English
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="journal-info">
+
+              <a href="blog-single.html"><img src="images/blog-post-2.jpg" class="img-responsive" alt="img"></a>
+
+              <div class="journal-txt">
+
+                <h4><a href="#blog-single.html">WE'RE GONA MAKE DREAMS COMES</a></h4>
+                <p class="separator">To an English person, it will seem like simplified English
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="journal-info">
+
+              <a href="blog-single.html"><img src="images/blog-post-3.jpg" class="img-responsive" alt="img"></a>
+
+              <div class="journal-txt">
+
+                <h4><a href="blog-single.html">NEW LIFE CIVILIZATIONS TO BOLDLY</a></h4>
+                <p class="separator">To an English person, it will seem like simplified English
+                </p>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+   End section journal 
+ -->
+</center>
+<br>
+<br>
+  <!-- start sectoion contact -->
+  <div id="contact" class="paddsection" >
+    <div class="container">
+      <div class="contact-block1">
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="contact-contact">
+
+              <h2 class="mb-30">GET IN TOUCH</h2>
+
+              <ul class="contact-details">
+                <li><span>Mwisho Street Dar Es Salaam,Tanzania</span></li>
+                <li><span>PO Box: 14353, Shop #4,Shreeji Tower, Ground Floor</span></li>
+                <li><span>+255 784 767778</span></li>
+                 <li><span>+255 754 781653</span></li>
+                <li><span><a href="mailto:info@weldingalloystz.com" style="color:brown"> info@weldingalloystz.com</a></span></li>
+              </ul>
+
+            </div>
+          </div>
+
+<<<<<<< Updated upstream:index.php
+          <div class="col-lg-6">
+            <form action="emailsend.php" method="post" role="form" class="contactForm">
+              <div class="row">
+
+=======
+         <div class="col-lg-6">
+        <form id="whatsappForm">
+            <div class="row">
+>>>>>>> Stashed changes:index.html
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+
+                <div class="col-lg-6">
+                    <div class="form-group contact-block1">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="You Name" required/>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required/>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required/>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" id="message" rows="5" required placeholder="Message"></textarea>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <input type="submit" class="btn btn-defeault btn-send" value="Send message">
+                </div>
+            </div>
+        </form>
+    </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- start sectoion contact -->
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.613740683986!2d39.28043107441841!3d-6.816745166674526!2m3!1f0!2f0!3
+f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b00760c9433%3A0xae9bdffbc6b2c35f!2sWelding%20Alloys%20Tanzania%20Limited!5e0!3m2!1sen!2stz!4v17
+43528967783!5m2!1sen!2stz" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+  <!-- start section footer -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+          <!-- <li><a href="#"><i class="ion-social-twitter"></i></a></li> -->
+          <li><a href="https://www.instagram.com/weldingalloystz?igsh=Nnk1MnMyb2pmcDRx"><i class="ion-social-instagram"></i></a></li>
+          <!-- <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+          <li><a href="#"><i class="ion-social-tumblr"></i></a></li>
+          <li><a href="#"><i class="ion-social-dribbble"></i></a></li> -->
+        </ul>
+
+      </div>
+
+      <p>&copy; Copyrights. All rights reserved.</p>
+
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
+        -->
+        Designed by <a href="https://bootstrapmade.com/">TechGuide</a>
+      </div>
+
+    </div>
+  </div>
+  <!-- End section footer -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/typed/typed.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
