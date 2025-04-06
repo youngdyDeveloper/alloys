@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welding Electrodes</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+<script>
+  $(document).ready(function () {
+    $('.search input').on('input', function () {
+      const term = $(this).val().toLowerCase();
+      $('.image-box').each(function () {
+        const name = $(this).find('.image-name').text().toLowerCase();
+        $(this).toggle(name.includes(term));
+      });
+    });
+  });
+</script>
+
+  <style>
+  body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f9f9f9; */
+    /* background-color: rgba(0, 0, 0, 0.5); */
+
+  }
+
+  /* Top Bar */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f2f2f2;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .logo-name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+.logo-name img{
+   height:60px;
+}
+  .logo {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+  }
+
+  .links-search {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .links a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+  }
+
+  .search input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+   .links a{
+            font-family:nimala ui;
+            font-size: 20px;
+        }
+  /* Content */
+  .content {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
+  .subtitle {
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:brown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+ .image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center; /* Hii inasogeza mabox katikati */
+}
+
+
+  .image-box {
+  border: 1px solid #000;
+  box-shadow: 0.2px 3px 1px 1px;
+  padding: 3px;
+  width: calc(15% - 10px); /* smaller size */
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.image-name {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #000;
+  font-weight: normal;
+   font-size: 18px;
+    font-weight: bold;
+}
+
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+   background-color: #f9f9f9; 
+
+  }
+
+  .image-name {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #000;
+    font-weight: normal;
+  }
+
+  /* Modal Preview */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal img {
+    max-width: 90%;
+    max-height: 80%;
+  }
+
+  .modal:target {
+    display: flex;
+  }
+
+  #footer {
+  background-color: #292929;
+ 
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.site-footer {
+  background: #2b2c3b;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px 20px;
+}
+
+.footer-title {
+  color: #2196f3; /* Blue instead of yellow */
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 30px;
+}
+</style>
+
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="logo-name">
+      <!-- <div class="logo"></div> -->
+    <img src="../images/logo.png">
+    </div>
+    <div class="links-search">
+      <div class="links">
+              <!-- <li class="filter filter-active" data-filter=".all">all</li>
+              <li class="filter" data-filter=".branding">branding</li>
+              <li class="filter" data-filter=".mockups">mockups</li> -->
+        <a href="../index.html">Home</a>
+        <a href="electrodes.html" class="smoothScroll">Welding Electrodes</a>
+         <a href="gaswelding.html" class="smoothScroll">Welding & Cutting</a>
+         <a href="grinding.html" class="smoothScroll">Power & Hand tools</a>
+         <a href="new.html" class="smoothScroll">Manual</a>
+
+          
+            </ul> 
+
+          </div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search...">
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-title">Welding Electrodes</div>
+
+    <div class="subtitle" id="mild">Mild Steel (Showing 3 images)</div>
+    <div class="image-row">
+      <div class="image-box"><a href="img/gallery/mild/1.jpg"><img src="img/gallery/mild/1.jpg" alt=""><div class="image-name">Weldarc</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/2.jpg"><img src="img/gallery/mild/2.jpg" alt=""><div class="image-name">Fontico</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/3.jpg"><img src="img/gallery/mild/3.jpg" alt=""><div class="image-name">Fontarc</div></a></div>
+    </div>
+
+    <div class="subtitle">Stainless Steel (Showing 7 images)</div>
+    <div class="image-row">
+      <div class="image-box"><a href="img/gallery/almnium/21.jpg"><img src="img/gallery/almnium/21.jpg" alt=""><div class="image-name">Fonweld E106</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/20.jpg"><img src="img/gallery/almnium/20.jpg" alt=""><div class="image-name">Fonweld E1107H</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/20.jpg"><img src="img/gallery/almnium/20.jpg" alt=""><div class="image-name">Fonweld E1124</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/20.jpg"><img src="img/gallery/almnium/20.jpg" alt=""><div class="image-name">Fonweld E1125</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/20.jpg"><img src="img/gallery/almnium/20.jpg" alt=""><div class="image-name">Fonweld E126</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/20.jpg"><img src="img/gallery/almnium/20.jpg" alt=""><div class="image-name">Fonweld E138</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/20.jpg"><img src="img/gallery/almnium/20.jpg" alt=""><div class="image-name">Fonweld E138MO</div></a></div>
+    </div>
+
+    <div class="subtitle">Cast Iron (Showing 3 images)</div>
+    <div class="image-row">
+     <div class="image-box"><a href="img/gallery/cast/10.jpg"><img src="img/gallery/cast/10.jpg" alt=""><div class="image-name">Fonweld E114</div></a></div>
+      <div class="image-box"><a href="img/gallery/cast/11.jpg"><img src="img/gallery/cast/11.jpg" alt=""><div class="image-name">Fonweld E117</div></a></div>
+      <div class="image-box"><a href="img/gallery/cast/13.jpg"><img src="img/gallery/cast/13.jpg" alt=""><div class="image-name">Fonweld E119</div></a></div>
+    </div>
+
+    <div class="subtitle">Copper Alloys and Silver Solders (Showing 5 images)</div>
+    <div class="image-row">
+     <div class="image-box"><a href="img/gallery/almnium/14.jpg"><img src="img/gallery/almnium/14.jpg" alt=""><div class="image-name">Fonweld E218</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/15.jpg"><img src="img/gallery/almnium/15.jpg" alt=""><div class="image-name">Fonweld A204</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/20.jpg"><img src="img/gallery/almnium/20.jpg" alt=""><div class="image-name">Fonweld A/AF210</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/20.jpg"><img src="img/gallery/almnium/20.jpg" alt=""><div class="image-name">Fonweld AF305</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/20.jpg"><img src="img/gallery/almnium/20.jpg" alt=""><div class="image-name">Fonweld EF314</div></a></div>
+    </div>
+
+    <div class="subtitle">Alminium (Showing 2 images)</div>
+    <div class="image-row">
+     <div class="image-box"><a href="img/gallery/almnium/14.jpg"><img src="img/gallery/almnium/14.jpg" alt=""><div class="image-name">Fonweld E409</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/20.jpg"><img src="img/gallery/almnium/20.jpg" alt=""><div class="image-name">Fonweld AF408</div></a></div>
+    </div>
+
+<div class="subtitle">Hard Facing (Showing 5 images)</div>
+    <div class="image-row">
+     <div class="image-box"><a href="img/gallery/almnium/14.jpg"><img src="img/gallery/almnium/14.jpg" alt=""><div class="image-name">Fonweld HF350</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/14.jpg"><img src="img/gallery/almnium/14.jpg" alt=""><div class="image-name">Fonweld H600</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/14.jpg"><img src="img/gallery/almnium/14.jpg" alt=""><div class="image-name">Fonweld E731/1</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/14.jpg"><img src="img/gallery/almnium/14.jpg" alt=""><div class="image-name">Fonweld E737</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/14.jpg"><img src="img/gallery/almnium/14.jpg" alt=""><div class="image-name">Fonweld EF13</div></a></div>
+     <div class="image-box"><a href="img/gallery/almnium/14.jpg"><img src="img/gallery/almnium/14.jpg" alt=""><div class="image-name">Fonweld AF700</div></a></div>
+    </div>
+
+	<div class="subtitle">Gouging and Cutting (Showing 2 images)</div>
+    <div class="image-row">
+     <div class="image-box"><a href="img/gallery/almnium/22.jpg"><img src="img/gallery/almnium/22.jpg" alt=""><div class="image-name">Fonweld E900</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/23.jpg"><img src="img/gallery/almnium/23.jpg" alt=""><div class="image-name">Fonweld E901</div></a></div>
+    </div>
+  </div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4 class="footer-title">MORE INFORMATION</h4>
+      <ul>
+           <li><a href="../index.html#header" class="smoothScroll">Home</a></li>
+          <li><a href="../index.html#about" class="smoothScroll">About</a></li>
+          <li><a href="../index.html#portfolio" class="smoothScroll">Products</a></li>
+          <li><a href="../index.html#journal" class="smoothScroll">Places We Cater</a></li>
+          <li><a href="../index.html#contact" class="smoothScroll">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-title">CONTACT US</h4>
+      <address style="line-height:27px;">
+       <span>Mwisho Street Dar Es Salaam,<br>Tanzania</span></li>
+              <span>PO Box: 14353, Shop #4,<br>Shreeji Tower, Ground Floor<br></span>
+              <span>+255 784 767778</span>
+                <span>+255 754 781653</span>
+              <span><a href="mailto:info@weldingalloystz.com" style="color:brown"> info@weldingalloystz.com</a></span>
+        <ul class="list-unstyled list-social">
+        <a href="#"><i class="ion-social-facebook"></i></a>
+          <!-- <li><a href="#"><i class="ion-social-twitter"></i></a></li> -->
+          <a href="https://www.instagram.com/weldingalloystz?igsh=Nnk1MnMyb2pmcDRx"><i class="ion-social-instagram"></i></a>
+        </ul>
+      </address>
+      
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-title">CATEGORIES</h4>
+      <ul style="line-height:20px;">
+        <li><a href="electrodes.html" class="smoothScroll">Welding Electrodes</a></li>
+          <li><a href="gaswelding.html" class="smoothScroll">Welding & Cutting</a></li>
+          <li><a href="grinding.html" class="smoothScroll">Power & Hand tools</a></li>
+         <li><a href="new.html" class="smoothScroll">Manual</a></li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Welding Alloys Ltd. Crafted by <a href="mailto:ndossdavid8@gmail.com"  style="color:brown;">TechGuide.</a>
+  </div>
+</footer>
+
+  <!-- Modal Previews -->
+  <div id="img1" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img1.jpg"></div>
+  <div id="img2" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img2.jpg"></div>
+  <div id="img3" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img3.jpg"></div>
+  <div id="img4" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img4.jpg"></div>
+  <div id="img5" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img5.jpg"></div>
+
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Power & Hand Tools</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+<script>
+  $(document).ready(function () {
+    $('.search input').on('input', function () {
+      const term = $(this).val().toLowerCase();
+      $('.image-box').each(function () {
+        const name = $(this).find('.image-name').text().toLowerCase();
+        $(this).toggle(name.includes(term));
+      });
+    });
+  });
+</script>
+
+  <style>
+  body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f9f9f9; */
+
+  }
+   .links a{
+            font-family:nimala ui;
+            font-size: 20px;
+        }
+  /* Top Bar */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f2f2f2;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .logo-name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+.logo-name img{
+   height:60px;
+}
+  .logo {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+  }
+
+  .links-search {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .links a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+  }
+
+  .search input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  /* Content */
+  .content {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+
+  .subtitle {
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:brown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+ .image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center; /* Hii inasogeza mabox katikati */
+}
+
+
+  .image-box {
+  border: 1px solid #000;
+    background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0.2px 3px 1px 1px;
+
+  padding: 3px;
+  width: calc(15% - 10px); /* smaller size */
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.image-name {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #000;
+  font-weight: normal;
+}
+
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .image-name {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #000;
+    font-weight: normal;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  /* Modal Preview */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal img {
+    max-width: 90%;
+    max-height: 80%;
+  }
+
+  .modal:target {
+    display: flex;
+  }
+
+  #footer {
+  background-color: #292929;
+ 
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.site-footer {
+  background: #2b2c3b;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px 20px;
+}
+
+.footer-title {
+  color: #2196f3; /* Blue instead of yellow */
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 30px;
+}
+</style>
+
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="logo-name">
+      <!-- <div class="logo"></div> -->
+    <img src="../images/logo.png">
+    </div>
+    <div class="links-search">
+      <div class="links">
+       <a href="../index.html">Home</a>
+        <a href="electrodes.html" class="smoothScroll">Welding Electrodes</a>
+         <a href="gaswelding.html" class="smoothScroll">Welding & Cutting</a>
+         <a href="grinding.html" class="smoothScroll">Power & Hand tools</a>
+         <a href="new.html" class="smoothScroll">Manual</a>
+
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search...">
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-title"><h3>Power and hand tool</h3></div>
+
+    <div class="subtitle">Drill Machines (Showing 4 images)</div>
+    <div class="image-row">
+      <div class="image-box"><a href="img/gallery/mild/4.jpg"><img src="img/gallery/mild/4.jpg" alt=""><div class="image-name">Hitachi FD 10SA</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/5.jpg"><img src="img/gallery/mild/5.jpg" alt=""><div class="image-name">Hitachi BU-PN3</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/6.jpg"><img src="img/gallery/mild/6.jpg" alt=""><div class="image-name">Hitachi PU-PM3</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/7.jpg"><img src="img/gallery/mild/7.jpg" alt=""><div class="image-name">Hitachi D 10YB</div></a></div>
+    </div>
+
+    <div class="subtitle">Impact Drills Machines (Showing 2 images)</div>
+    <div class="image-row">
+      <div class="image-box"><a href="img/gallery/mild/8.jpg"><img src="img/gallery/mild/8.jpg" alt=""><div class="image-name">Hitachi DV 18V</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/9.jpg"><img src="img/gallery/mild/9.jpg" alt=""><div class="image-name">Hitachi VTV-16</div></a></div>
+     
+    </div>
+
+    <div class="subtitle">Rotary Hammers and Demolition Machines (Showing 4 images)</div>
+    <div class="image-row">
+      <div class="image-box"><a href="img/gallery/mild/10.jpg"><img src="img/gallery/mild/10.jpg" alt=""><div class="image-name">Hitachi DH 24PB3</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/11.jpg"><img src="img/gallery/mild/11.jpg" alt=""><div class="image-name">Hitachi DH 30PC2</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/12.jpg"><img src="img/gallery/mild/12.jpg" alt=""><div class="image-name">Hitachi DH40MR</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/13.jpg"><img src="img/gallery/mild/13.jpg" alt=""><div class="image-name">Hitachi H 45MR</div></a></div>
+    </div>
+
+    <div class="subtitle">Bench and Pillars Drills machines (Showing 1 image)</div>
+    <div class="image-row">
+    <div class="image-box"><a href="img/gallery/mild/14.jpg"><img src="img/gallery/mild/14.jpg" alt=""><div class="image-name">Hitachi B16RM</div></a></div>
+      
+    </div>
+
+    <div class="subtitle">Cordless Machines (Showing 5 images)</div>
+    <div class="image-row">
+    <div class="image-box"><a href="img/gallery/mild/15.jpg"><img src="img/gallery/mild/15.jpg" alt=""><div class="image-name">Hitachi WR18DL</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/16.jpg"><img src="img/gallery/mild/16.jpg" alt=""><div class="image-name">Hitachi DV18DL2</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/17.jpg"><img src="img/gallery/mild/17.jpg" alt=""><div class="image-name">Hitachi DS14DVF3</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/18.jpg"><img src="img/gallery/mild/18.jpg" alt=""><div class="image-name">Hitachi DS12DVF3</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/19.jpg"><img src="img/gallery/mild/19.jpg" alt=""><div class="image-name">Hitachi WR 18DMR</div></a></div>
+    </div>
+  </div>
+
+    <div class="subtitle" id="grind">Grinding Machines (Showing 8 images)</div>
+    <div class="image-row">
+    <div class="image-box"><a href="img/gallery/mild/20.jpg"><img src="img/gallery/mild/20.jpg" alt=""><div class="image-name">Hitachi G12S2</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/21.jpg"><img src="img/gallery/mild/21.jpg" alt=""><div class="image-name">Hitachi G12SS</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/22.jpg"><img src="img/gallery/mild/23.jpg" alt=""><div class="image-name">Hitachi G18SE3</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/23.jpg"><img src="img/gallery/mild/23.jpg" alt=""><div class="image-name">Hitachi G 18SS</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/23.jp4"><img src="img/gallery/mild/23.jpg" alt=""><div class="image-name">Hitachi G23SC</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/23.jpg"><img src="img/gallery/mild/23.jpg" alt=""><div class="image-name">Hitachi G23SS</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/22.jpg"><img src="img/gallery/mild/22.jpg" alt=""><div class="image-name">Hitachi GP13</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/24.jpg"><img src="img/gallery/mild/24.jpg" alt=""><div class="image-name">Hitachi GP 2</div></a></div>
+    </div>
+  </div>
+
+     <div class="subtitle">Cutting Machines (Showing 6 images)</div>
+    <div class="image-row">
+    <div class="image-box"><a href="img/gallery/mild/25.jpg"><img src="img/gallery/mild/25.jpg" alt=""><div class="image-name">Hitachi C 7SF</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/26.jpg"><img src="img/gallery/mild/26.jpg" alt=""><div class="image-name">Hitachi C 9U2</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/27.jpg"><img src="img/gallery/mild/27.jpg" alt=""><div class="image-name">Hitachi C 10FCE2</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/28.jpg"><img src="img/gallery/mild/28.jpg" alt=""><div class="image-name">Hitachi C 12FCH</div></a></div>
+      <div class="image-box"><a href="#img1"><img src="img/gallery/mild/" alt="Image Not Available"><div class="image-name">Hitachi Cj 110MV</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/29.jpg"><img src="img/gallery/mild/29.jpg" alt=""><div class="image-name">Hitachi FCJ 65v3</div></a></div>
+    </div>
+  </div>
+
+   <div class="subtitle">Sanding and Polishing Machines (Showing 4 images)</div>
+    <div class="image-row">
+    <div class="image-box"><a href="img/gallery/mild/30.jpg"><img src="img/gallery/mild/30.jpg" alt=""><div class="image-name">Hitachi SB8V2</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/32.jpg"><img src="img/gallery/mild/32.jpg" alt=""><div class="image-name">Hitachi SB10V2</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/33.jpg"><img src="img/gallery/mild/33.jpg" alt=""><div class="image-name">Hitachi SP 18VA</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/34.jpg"><img src="img/gallery/mild/34.jpg" alt=""><div class="image-name">Hitachi SV 12SD</div></a></div>
+    </div>
+  </div>
+
+  <div class="subtitle">Planning and ROuting Machines (Showing 3 images)</div>
+    <div class="image-row">
+    <div class="image-box"><a href="img/gallery/mild/35.jpg"><img src="img/gallery/mild/35.jpg" alt=""><div class="image-name">Hitachi M12V2</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/36.jpg"><img src="img/gallery/mild/36.jpg" alt=""><div class="image-name">Hitachi P20ST</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/37.jpg"><img src="img/gallery/mild/37.jpg" alt=""><div class="image-name">Hitachi P20SA2</div></a></div>
+    </div>
+  </div>
+
+    <div class="subtitle" id="other">Other Power Tools (Showing 7 images)</div>
+    <div class="image-row">
+    <div class="image-box"><a href="img/gallery/mild/38.jpg"><img src="img/gallery/mild/38.jpg" alt=""><div class="image-name">Hitachi RH600T</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/39.jpg"><img src="img/gallery/mild/39.jpg" alt=""><div class="image-name">Hitachi AW150</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/40.jpg"><img src="img/gallery/mild/40.jpg" alt=""><div class="image-name">Hitachi WR16SE</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/41.jpg"><img src="img/gallery/mild/41.jpg" alt=""><div class="image-name">Hitachi RB 40VA</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/42.jpg"><img src="img/gallery/mild/42.jpg" alt=""><div class="image-name">Hitachi W8VB2</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/43.jpg"><img src="img/gallery/mild/43.jpg" alt=""><div class="image-name">Hitachi WR 16SA</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/44.jpg"><img src="img/gallery/mild/44.jpg" alt=""><div class="image-name">Hitachi WR 22SA</div></a></div>
+    </div>
+  </div>
+
+   <div class="subtitle">Power Tools and Accessories (Showing 3 images)</div>
+    <div class="image-row">
+    <div class="image-box"><a href="img/gallery/mild/46.jpg"><img src="img/gallery/mild/46.jpg" alt=""><div class="image-name">Demolition Chisel</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/47.jpg"><img src="img/gallery/mild/47.jpg" alt=""><div class="image-name">Sds-Max</div></a></div>
+      <div class="image-box"><a href="img/gallery/mild/48.jpg"><img src="img/gallery/mild/48.jpg" alt=""><div class="image-name">Irwin Hss Drill Bit</div></a></div>
+    </div>
+  </div>
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4 class="footer-title">MORE INFORMATION</h4>
+      <ul>
+           <li><a href="../index.html#header" class="smoothScroll">Home</a></li>
+           <li><a href="../index.html#about" class="smoothScroll">About</a></li>
+          <li><a href="../index.html#portfolio" class="smoothScroll">Products</a></li>
+          <li><a href="../index.html#journal" class="smoothScroll">Places We Cater</a></li>
+          <li><a href="../index.html#contact" class="smoothScroll">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-title">CONTACT US</h4>
+      <address style="line-height:27px;">
+       <span>Mwisho Street Dar Es Salaam,<br>Tanzania</span></li>
+              <span>PO Box: 14353, Shop #4,<br>Shreeji Tower, Ground Floor<br></span>
+              <span>+255 784 767778</span>
+                <span>+255 754 781653</span>
+              <span><a href="mailto:info@weldingalloystz.com" style="color:brown"> info@weldingalloystz.com</a></span>
+        <ul class="list-unstyled list-social">
+        <a href="#"><i class="ion-social-facebook"></i></a>
+          <!-- <li><a href="#"><i class="ion-social-twitter"></i></a></li> -->
+          <a href="https://www.instagram.com/weldingalloystz?igsh=Nnk1MnMyb2pmcDRx"><i class="ion-social-instagram"></i></a>
+        </ul>
+      </address>
+      
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-title">CATEGORIES</h4>
+      <ul style="line-height:20px;">
+        <li><a href="electrodes.html" class="smoothScroll">Welding Electrodes</a></li>
+          <li><a href="gaswelding.html" class="smoothScroll">Welding & Cutting</a></li>
+          <li><a href="grinding.html" class="smoothScroll">Power & Hand tools</a></li>
+         <li><a href="new.html" class="smoothScroll">Manual</a></li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Welding Alloys Ltd. Crafted by <a href="mailto:ndossdavid8@gmail.com"  style="color:brown;">TechGuide.</a>
+  </div>
+</footer>
+  <!-- Modal Previews -->
+  <div id="img1" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img1.jpg"></div>
+  <div id="img2" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img2.jpg"></div>
+  <div id="img3" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img3.jpg"></div>
+  <div id="img4" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img4.jpg"></div>
+  <div id="img5" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img5.jpg"></div>
+
+</body>
+</html>

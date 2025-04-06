@@ -1,0 +1,143 @@
+<!-- <!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form to WhatsApp</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <form id="whatsappForm">
+        <label>Jina:</label>
+        <input type="text" id="name" required><br><br>
+
+        <label>Namba ya Simu:</label>
+        <input type="tel" id="phone" required><br><br>
+
+        <label>Ujumbe:</label>
+        <textarea id="message" required></textarea><br><br>
+
+        <button type="submit">Tuma WhatsApp</button>
+    </form>
+
+    <script>
+        $(document).ready(function() {
+            $("#whatsappForm").submit(function(e) {
+                e.preventDefault();
+                
+                var name = $("#name").val().trim();
+                var phone = $("#phone").val().trim();
+                var message = $("#message").val().trim();
+
+                if (name === "" || phone === "" || message === "") {
+                    alert("Tafadhali jaza sehemu zote!");
+                    return;
+                }
+
+                var whatsappMessage = "Jina: " + name + "%0A" +
+                                      "Namba: " + phone + "%0A" +
+                                      "Ujumbe: " + message;
+
+                var whatsappUrl = "https://wa.me/255782718147?text=" + whatsappMessage;
+
+                window.open(whatsappUrl, "_blank");
+            });
+        });
+    </script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.category {
+    width: 30%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.images img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="gallery">
+        <div class="category" id="category1">
+            <h2>Category 1</h2>
+            <div class="images">
+                <img src="1.jpg" alt="Image 1">
+                <img src="2.jpg" alt="Image 2">
+                <img src="3.jpg" alt="Image 3">
+            </div>
+        </div>
+
+        <div class="category" id="category2">
+            <h2>Category 2</h2>
+            <div class="images">
+                <img src="4.jpg" alt="Image 4">
+                <img src="5.jpg" alt="Image 5">
+                <img src="6.jpg" alt="Image 6">
+            </div>
+        </div>
+
+        <div class="category" id="category3">
+            <h2>Category 3</h2>
+            <div class="images">
+                <img src="7.jpg" alt="Image 7">
+                <img src="8.jpg" alt="Image 8">
+                <img src="9.jpg" alt="Image 9">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

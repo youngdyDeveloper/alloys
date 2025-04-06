@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welding Electrodes</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+<script>
+  $(document).ready(function () {
+    $('.search input').on('input', function () {
+      const term = $(this).val().toLowerCase();
+      $('.image-box').each(function () {
+        const name = $(this).find('.image-name').text().toLowerCase();
+        $(this).toggle(name.includes(term));
+      });
+    });
+  });
+</script>
+
+  <style>
+  body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f9f9f9; */
+
+  }
+
+  /* Top Bar */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f2f2f2;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .logo-name {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+.logo-name img{
+   height:60px;
+}
+  .logo {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+  }
+
+  .links-search {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .links a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+  }
+
+  .search input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  /* Content */
+  .content {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+   .links a{
+            font-family:nimala ui;
+            font-size: 20px;
+        }
+  .subtitle {
+    margin-left: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:brown;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+ .image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center; /* Hii inasogeza mabox katikati */
+}
+
+
+  .image-box {
+  border: 1px solid #000;
+  padding: 3px;
+  width: calc(15% - 10px); /* smaller size */
+  box-shadow: 0.2px 3px 1px 1px;
+
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.image-name {
+  margin-top: 5px;
+  font-size: 13px;
+  color: #000;
+  font-weight: normal;
+   font-size: 18px;
+    font-weight: bold;
+}
+
+
+  .image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .image-name {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #000;
+    font-weight: normal;
+  }
+
+  /* Modal Preview */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal img {
+    max-width: 90%;
+    max-height: 80%;
+  }
+
+  .modal:target {
+    display: flex;
+  }
+
+ #footer {
+  background-color: #292929;
+ 
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.site-footer {
+  background: #2b2c3b;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px 20px;
+}
+
+.footer-title {
+  color: #2196f3; /* Blue instead of yellow */
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 30px;
+}
+</style>
+
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="logo-name">
+      <!-- <div class="logo"></div> -->
+    <img src="../images/logo.png">
+    </div>
+    <div class="links-search">
+      <div class="links">
+        <a href="../index.html">Home</a>
+        <a href="electrodes.html" class="smoothScroll">Welding Electrodes</a>
+         <a href="gaswelding.html" class="smoothScroll">Welding & Cutting</a>
+         <a href="grinding.html" class="smoothScroll">Power & Hand tools</a>
+         <a href="new.html" class="smoothScroll">Manual</a>
+
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search...">
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="section-title">WELDING & CUTTING</div>
+
+    <div class="subtitle">Gas welding and Cutting Equipment (Showing 39 images)</div>
+    <div class="image-row">
+      <div class="image-box"><a href="img/gallery/almnium/24.jpg"><img src="img/gallery/almnium/24.jpg" alt=""><div class="image-name">Twin Gas Hose 3/8"</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/24.jpg"><img src="img/gallery/almnium/24.jpg" alt=""><div class="image-name">Twin Gas Hose 5/6"</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/25.jpg"><img src="img/gallery/almnium/25.jpg" alt=""><div class="image-name">Single Welding Hoses-Propane Lpg 3/8</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/26.jpg"><img src="img/gallery/almnium/26.jpg" alt=""><div class="image-name">Single Welding Hoses- Oxygen 3/8"</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/26.jpg"><img src="img/gallery/almnium/26.jpg" alt=""><div class="image-name">Single Welding Hoses- Oxygen 5/16"</div></a></div>
+    </div>
+    
+      <div class="image-row">
+        <div class="image-box"><a href="img/gallery/almnium/25.jpg"><img src="img/gallery/almnium/25.jpg" alt=""><div class="image-name">Single Welding Hoses- Acetylene 3/8"</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/25.jpg"><img src="img/gallery/almnium/25.jpg" alt=""><div class="image-name">Single Welding Hoses- Acetylene 5/16"</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/24.jpg"><img src="img/gallery/almnium/24.jpg" alt=""><div class="image-name">Twin Gas Hose <small>1/4"</small></div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/24.jpg"><img src="img/gallery/almnium/28.jpg" alt=""><div class="image-name">Single Welding Hoses- Oxygen 3/8"</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/24.jpg"><img src="img/gallery/almnium/29.jpg" alt=""><div class="image-name">Loxygen Multi Stage Regulator</div></a></div>
+
+    </div>
+
+    <div class="image-row">
+
+      <div class="image-box"><a href="img/gallery/almnium/30.jpg"><img src="img/gallery/almnium/30.jpg" alt=""><div class="image-name">UNI-5 Mixing Chamber</div></a></div>
+     <div class="image-box"><a href="img/gallery/almnium/31.jpg"><img src="img/gallery/almnium/31.jpg" alt=""><div class="image-name">UNI-3 Shank/Torch Handle</div></a></div>
+     <div class="image-box"><a href="img/gallery/almnium/32.jpg"><img src="img/gallery/almnium/32.jpg" alt=""><div class="image-name">UNI-4 Cutting Attachments</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/33.jpg"><img src="img/gallery/almnium/33.jpg" alt=""><div class="image-name">1601 Hand Cutting Torches</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/34.jpg"><img src="img/gallery/almnium/34.jpg" alt=""><div class="image-name">Propane Superheating Castelated Nozzles</div></a></div>
+    </div>
+    
+      <div class="image-row">
+      
+      <div class="image-box"><a href="img/gallery/almnium/35.jpg"><img src="img/gallery/almnium/35.jpg" alt=""><div class="image-name">Type 2 & 3 Heavy Duty Swaged Welding ..."</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/36.jpg"><img src="img/gallery/almnium/36.jpg" alt=""><div class="image-name">Agnm Gouging Nozzles</div></a></div>
+     <div class="image-box"><a href="img/gallery/almnium/37.jpg"><img src="img/gallery/almnium/37.jpg" alt=""><div class="image-name">Asnme Cutting Nozzle</div></a></div>
+     <div class="image-box"><a href="img/gallery/almnium/38.jpg"><img src="img/gallery/almnium/38.jpg" alt=""><div class="image-name">Pnm & Pnme Cutting Nozzles</div></a></div>
+     <div class="image-box"><a href="img/gallery/almnium/39.jpg"><img src="img/gallery/almnium/39.jpg" alt=""><div class="image-name">Anm & Anme Cutting Nozzles</div></a></div>
+    </div>
+     
+    <div class="image-row">
+      <div class="image-box"><a href="img/gallery/almnium/40.jpg"><img src="img/gallery/almnium/40.jpg" alt=""><div class="image-name">Cutting Torch Heads And Spares</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/41.jpg"><img src="img/gallery/almnium/41.jpg" alt=""><div class="image-name">Cylinder Inlet Sterms</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/42.jpg"><img src="img/gallery/almnium/42.jpg" alt=""><div class="image-name">Cylinder Nuts</div></a></div>
+     <div class="image-box"><a href="img/gallery/almnium/42.jpg"><img src="img/gallery/almnium/43.jpg" alt=""><div class="image-name">Hose Splicers</div></a></div>
+     <div class="image-box"><a href="img/gallery/almnium/42.jpg"><img src="img/gallery/almnium/44.jpg" alt=""><div class="image-name">Accessories</div></a></div>
+    </div>
+      
+    <div class="image-row">
+     <div class="image-box"><a href="img/gallery/almnium/45.jpg"><img src="img/gallery/almnium/45.jpg" alt=""><div class="image-name">Spare Regulator Gauges</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/46.jpg"><img src="img/gallery/almnium/46.jpg" alt=""><div class="image-name">Valved "Y" Pieces</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/47.jpg"><img src="img/gallery/almnium/47.jpg" alt=""><div class="image-name">Outlet Nipples</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/48.jpg"><img src="img/gallery/almnium/48.jpg" alt=""><div class="image-name">Hose Connecting Nipples</div></a></div>
+     <div class="image-box"><a href="img/gallery/almnium/49.jpg"><img src="img/gallery/almnium/49.jpg" alt=""><div class="image-name">Hose Cutting Nuts</div></a></div>
+    </div>
+
+    <div class="image-row">
+
+     <div class="image-box"><a href="img/gallery/almnium/50.jpg"><img src="img/gallery/almnium/50.jpg" alt=""><div class="image-name">Reverse Flow Valve</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/51.jpg"><img src="img/gallery/almnium/51.jpg" alt=""><div class="image-name">Flashback Arrestors</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/27.jpg"><img src="img/gallery/almnium/27.jpg" alt=""><div class="image-name">Single Welding Hoses Acetylene <small>1/4</small></div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/52.jpg"><img src="img/gallery/almnium/52.jpg" alt=""><div class="image-name">Twin Welding Hoses</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/53.jpg"><img src="img/gallery/almnium/53.jpg" alt=""><div class="image-name">Hugon CG1-30</div></a></div>
+    </div>
+    
+      <div class="image-row">
+   
+      <div class="image-box"><a href="img/gallery/almnium/54.jpg"><img src="img/gallery/almnium/54.jpg" alt=""><div class="image-name">Hugon CG2-150B</div></a></div>
+     <div class="image-box"><a href="img/gallery/almnium/55.jpg"><img src="img/gallery/almnium/55.jpg" alt=""><div class="image-name">Hugon CG2-150 Profile Cutter</div></a></div>
+     
+    </div>
+    </div>
+
+  
+       <div class="subtitle" id="arc">Arc Welding Equipment (Showing 17 images)</div>
+    <div class="image-row">
+      <div class="image-box"><a href="img/gallery/almnium/1.jpg"><img src="img/gallery/almnium/1.jpg" alt=""><div class="image-name">Hugong AC 2200</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/2.jpg"><img src="img/gallery/almnium/2.jpg" alt=""><div class="image-name">Hugong AC250AC</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/3.jpg"><img src="img/gallery/almnium/3.jpg" alt=""><div class="image-name">HUGONG BX1-630F3</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/3.jpg"><img src="img/gallery/almnium/3.jpg" alt=""><div class="image-name">Hugong BX1-400F3</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/5.jpg"><img src="img/gallery/almnium/5.jpg" alt=""><div class="image-name">Hugong Uniarc 400/300 AC/FC</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/.jpg"><img src="img/gallery/almnium/6.jpg" alt=""><div class="image-name">Hugong Deltapower 315E/400E/630E</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/7.jpg"><img src="img/gallery/almnium/7.jpg" alt=""><div class="image-name">Hugong Hgmig 250</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/7.jpg"><img src="img/gallery/almnium/7.jpg" alt=""><div class="image-name">Hugong Hgmig 201</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/9.jpg"><img src="img/gallery/almnium/9.jpg" alt=""><div class="image-name">Hugong Hgmig 500</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/9.jpg"><img src="img/gallery/almnium/9.jpg" alt=""><div class="image-name">Hugong Hgmig 350</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/11.jpg"><img src="img/gallery/almnium/11.jpg" alt=""><div class="image-name">Hugong Handy Tig 200S</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/12.jpg"><img src="img/gallery/almnium/12.jpg" alt=""><div class="image-name">Hugong Protig 250 pulse Tig</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/13.jpg"><img src="img/gallery/almnium/13.jpg" alt=""><div class="image-name">Hugong Wave 200 Ac/Dc Tig</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/4.jpg"><img src="img/gallery/almnium/4.jpg" alt=""><div class="image-name">Hugong Superwave 315 Ac/Dc Tig</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/8.jpg"><img src="img/gallery/almnium/8.jpg" alt=""><div class="image-name">Hg Hugong 100</div></a></div>
+      <div class="image-box"><a href="img/gallery/almnium/8.jpg"><img src="img/gallery/almnium/8.jpg" alt=""><div class="image-name">Hg Hugong 120</div></a></div>
+      <div class="image-box"><a href="#img/gallery/almnium/8.jpg"><img src="img/gallery/almnium/8.jpg" alt=""><div class="image-name">Hg Hugong 60</div></a></div>
+
+    </div>
+
+  </div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4 class="footer-title">MORE INFORMATION</h4>
+      <ul>
+ <li>      <a href="index.html#header" class="smoothScroll">Home</a></li>
+          <li><a href="../index.html#about" class="smoothScroll">About</a></li>
+          <li><a href="../index.html#portfolio" class="smoothScroll">Products</a></li>
+          <li><a href="../index.html#journal" class="smoothScroll">Places We Cater</a></li>
+          <li><a href="../index.html#contact" class="smoothScroll">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-title">CONTACT US</h4>
+      <address style="line-height:27px;">
+       <span>Mwisho Street Dar Es Salaam,<br>Tanzania</span></li>
+              <span>PO Box: 14353, Shop #4,<br>Shreeji Tower, Ground Floor<br></span>
+              <span>+255 784 767778</span>
+                <span>+255 754 781653</span>
+              <span><a href="mailto:info@weldingalloystz.com" style="color:brown"> info@weldingalloystz.com</a></span>
+        <ul class="list-unstyled list-social">
+        <a href="#"><i class="ion-social-facebook"></i></a>
+          <!-- <li><a href="#"><i class="ion-social-twitter"></i></a></li> -->
+          <a href="https://www.instagram.com/weldingalloystz?igsh=Nnk1MnMyb2pmcDRx"><i class="ion-social-instagram"></i></a>
+        </ul>
+      </address>
+      
+    </div>
+    <div class="footer-column">
+      <h4 class="footer-title">CATEGORIES</h4>
+      <ul style="line-height:20px;">
+         <li><a href="electrodes.html" class="smoothScroll">Welding Electrodes</a></li>
+          <li><a href="gaswelding.html" class="smoothScroll">Welding & Cutting</a></li>
+          <li><a href="grinding.html" class="smoothScroll">Power & Hand tools</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Welding Alloys Ltd. Crafted by <a href="mailto:ndossdavid8@gmail.com"  style="color:brown;">TechGuide.</a>
+  </div>
+</footer>
+  <!-- Modal Previews -->
+  <div id="img1" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img1.jpg"></div>
+  <div id="img2" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img2.jpg"></div>
+  <div id="img3" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img3.jpg"></div>
+  <div id="img4" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img4.jpg"></div>
+  <div id="img5" class="modal" onclick="location.href='#'"><img src="img/gallery/mild/img5.jpg"></div>
+
+</body>
+</html>
