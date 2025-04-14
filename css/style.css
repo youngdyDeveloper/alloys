@@ -236,10 +236,11 @@ nav ul li a {
 
 .logo {
   float: left;
+  padding-left: -100px;
 }
 
 .logo img {
-  width: 200px;
+  width: 250px;
   height: 50px;
 }
 
@@ -438,9 +439,11 @@ nav ul li a {
 #portfolio .portfolio-list .nav {
   display: inline-block;
   margin: 0;
+  
 }
 
 #portfolio .portfolio-list .nav li {
+  
   margin: 0 40px 0 0;
   float: left;
   font-size: 14px;
@@ -457,6 +460,7 @@ nav ul li a {
   -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
 }
+
 
 #portfolio .portfolio-list .nav li:hover, #portfolio .portfolio-list .nav li.filter-active  {
   /* color: #b8a07e; */

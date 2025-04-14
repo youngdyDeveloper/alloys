@@ -13,7 +13,6 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
-
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -40,6 +39,19 @@
   ======================================================= -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/main.js"></script>
+  <style>
+    .portfolio-list li a b {
+    color: white;
+    font-size: 15px;
+    transition: color 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+  }
+
+  .portfolio-list li a:hover b {
+    color: rgba(255, 0, 0, 0.8); /* Red with some opacity */
+    opacity: 0.8;
+  }
+  </style>
 
 </head>
  <script>
@@ -89,11 +101,17 @@ $(document).ready(function() {
         <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
 
         <ul class="nav-menu list-unstyled">
-          <li><a href="#header" class="smoothScroll">Home</a></li>
+          <!-- <li><a href="#header" class="smoothScroll">Home</a></li>
           <li><a href="#about" class="smoothScroll">About</a></li>
           <li><a href="#portfolio" class="smoothScroll">Products</a></li>
           <li><a href="#journal" class="smoothScroll">Places We Cater</a></li>
-          <li><a href="#contact" class="smoothScroll">Contact</a></li>
+          <li><a href="#contact" class="smoothScroll">Contact</a></li> -->
+          
+<div class="portfolio-list">
+  <li><a href="gallery/electrodes.html" class="smoothScroll"><b>Welding Electrodes</b></a></li>
+  <li><a href="gallery/gaswelding.html" class="smoothScroll"><b>Welding & Cutting</b></a></li>
+  <li><a href="gallery/grinding.html" class="smoothScroll"><b>Power & Hand tools</b></a></li>
+</div>
         </ul>
 
       </div>
@@ -108,8 +126,8 @@ $(document).ready(function() {
     <div class="container">
       <div class="header-content">
         <center>
-        <h3 style="color:black;">Welding Alloys Ltd. <span class="typed"></span></h3>
-        <marquee style="color:black; ">One stop for welding.</marquee>
+        <h1 style="color:#121212; font-size:90px; font-family: lucida bright;">Welding Alloys Limited. <span class="typed"></span></h1>
+        <h3 style="color:black; font-size:40px;">One stop for welding.</h3>
   
         </center>
         
@@ -135,11 +153,11 @@ $(document).ready(function() {
         <div class="col-lg-7">
           <div class="about-descr">
 
-            <p class="p-heading">We are one of the leading premium supplier of high-qualityWelding Solutions & Equipment across EAST AFRICA. </p>
-            <p class="separator">Our team have vast and extensive experience within multipleportfolios and are leaders in Supply Chain and Sourcingactivities across various industries. 
-              We considers themselvesas heir clients’ strategic sourcing partner, and can supply themall types of materials, services and consulting.
-Sourcing is crucial in any industry; proficient skills & technicalexpertise in this field are essential to procuring the rightproducts, 
-at the right cost, and at the right time.Welding alloys is here to provide these highly sought afterskills.</p>
+            <p class="p-heading">We are one of the leading premium supplier of high-quality Welding Solutions & Equipment across EAST AFRICA. </p>
+            <p class="separator">Our team have vast and extensive experience within multiple portfolios and are leaders in Supply Chain and Sourcing activities across various industries. 
+              We considers themselves as  their clients’ strategic sourcing partner, and can supply them all types of materials, services and consulting.
+Sourcing is crucial in any industry; proficient skills & technical expertise in this field are essential to procuring the right products, 
+at the right cost, and at the right time. Welding alloys is here to provide these highly sought after skills.</p>
 
           </div>
 
@@ -255,17 +273,17 @@ at the right cost, and at the right time.Welding alloys is here to provide these
 
           <div class="portfolio-list">
 
-             <ul class="nav list-unstyled" id="portfolio-flters">
-              <!-- <li class="filter filter-active" data-filter=".all">all</li>
+            <!-- <ul class="nav list-unstyled" id="portfolio-flters">
+               <li class="filter filter-active" data-filter=".all">all</li>
               <li class="filter" data-filter=".branding">branding</li>
-              <li class="filter" data-filter=".mockups">mockups</li> -->
+              <li class="filter" data-filter=".mockups">mockups</li> 
              <li><a href="gallery/electrodes.html" class="smoothScroll">Welding Electrodes</a></li>
           <li><a href="gallery/gaswelding.html" class="smoothScroll">Welding & Cutting</a></li>
           <li><a href="gallery/grinding.html" class="smoothScroll">Power & Hand tools</a></li>
           
             </ul> 
 
-          </div>
+          </div>-->
 
           <div class="portfolio-container">
 
@@ -533,6 +551,13 @@ SUGAR, STEEL AND MILLING, MINING & MINERAL PROCESSING, LOAD AND HAUL, STORAGE & 
                     </div>
                 </div>
 
+                 <div class="col-lg-6">
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="phone" id="email" style="width:540px;" placeholder="Phone: +255....." required/>
+                        <div class="validation"></div>
+                    </div>
+                </div>
+
                 <div class="col-lg-12">
                     <div class="form-group">
                         <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required/>
@@ -588,7 +613,7 @@ f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b00760c9433%3A0xae9bdffbc6b2c35f!2sW
                 <span>+255 754 781653</span>
               <span><a href="mailto:info@weldingalloystz.com" style="color:brown"> info@weldingalloystz.com</a></span>
         <ul class="list-unstyled list-social">
-        <a href="#"><i class="ion-social-facebook"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61574550790207"><i class="ion-social-facebook"></i></a>
           <!-- <li><a href="#"><i class="ion-social-twitter"></i></a></li> -->
           <a href="https://www.instagram.com/weldingalloystz?igsh=Nnk1MnMyb2pmcDRx"><i class="ion-social-instagram"></i></a>
         </ul>
