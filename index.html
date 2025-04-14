@@ -61,10 +61,11 @@ $(document).ready(function() {
 
         var name = $("#name").val().trim();
         var email = $("#email").val().trim();
+        var phone = $("#phone").val().trim();
         var subject = $("#subject").val().trim();
         var message = $("#message").val().trim();
 
-        if (name === "" || email === "" || subject === "" || message === "") {
+        if (name === "" || email === "" || phone === "" || subject === "" || message === "") {
             $("#errormessage").text("Tafadhali jaza sehemu zote!").show();
             return;
         }
@@ -72,6 +73,7 @@ $(document).ready(function() {
         // Construct message and encode it
         var whatsappMessage = "Name: " + name + "\n" +
                               "Email: " + email + "\n" +
+                              "Phone_Number: " + phone + "\n" +
                               "Subject: " + subject + "\n" +
                               "Message: " + message;
 
@@ -126,8 +128,8 @@ $(document).ready(function() {
     <div class="container">
       <div class="header-content">
         <center>
-        <h1 style="color:	#BF00FF; font-size:80px; font-family: lucida bright;">Welding Alloys Tanzania Limited. <span class="typed"></span></h1>
-        <h3 style="color:rgba(141, 4, 4, 0.993); font-size:40px;">One stop for welding.</h3>
+        <h1 style="color:	#004085; font-size:80px; font-family: lucida bright; font-weight:bold;">Welding Alloys Tanzania Limited. <span class="typed"></span></h1>
+        <h3 style="color:magenta; font-size:40px;">One stop for welding.</h3>
   
         </center>
         
@@ -557,7 +559,7 @@ SUGAR, STEEL AND MILLING, MINING & MINERAL PROCESSING, LOAD AND HAUL, STORAGE & 
 
                  <div class="col-lg-12">
                     <div class="form-group">
-                        <input type="number" class="form-control" name="phone" id="email" placeholder="Phone: +255......." required/>
+                        <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone: +255......." required/>
                         <div class="validation"></div>
                     </div>
                 </div>
@@ -615,11 +617,11 @@ f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b00760c9433%3A0xae9bdffbc6b2c35f!2sW
               <span>PO Box: 14353, Shop #4,<br>Shreeji Tower, Ground Floor<br></span>
               <span>+255 784 767778</span>
                 <span>+255 754 781653</span>
-              <span><a href="mailto:info@weldingalloystz.com" style="color:brown"> info@weldingalloystz.com</a></span>
+              <span><a href="mailto:info@weldingalloystz.com" style="color:brown" target="_blank" rel="noopener noreferrer"> info@weldingalloystz.com</a></span>
         <ul class="list-unstyled list-social">
-        <a href="https://www.facebook.com/profile.php?id=61574550790207"><i class="ion-social-facebook"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61574550790207" target="_blank" rel="noopener noreferrer"><i class="ion-social-facebook"></i></a>
           <!-- <li><a href="#"><i class="ion-social-twitter"></i></a></li> -->
-          <a href="https://www.instagram.com/weldingalloystz?igsh=Nnk1MnMyb2pmcDRx"><i class="ion-social-instagram"></i></a>
+          <a href="https://www.instagram.com/weldingalloystz?igsh=Nnk1MnMyb2pmcDRx" target="_blank" rel="noopener noreferrer"><i class="ion-social-instagram"></i></a>
         </ul>
       </address>
       
@@ -634,7 +636,7 @@ f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b00760c9433%3A0xae9bdffbc6b2c35f!2sW
     </div>
   </div>
   <div class="footer-bottom">
-    &copy; 2025 Welding Alloys Ltd. Crafted by <a href="mailto:ndossdavid8@gmail.com"  style="color:brown;">TechGuide.</a>
+    &copy; 2025 Welding Alloys Ltd. Crafted by <a href="mailto:ndossdavid8@gmail.com" target="_blank" rel="noopener noreferrer" style="color:brown;">TechGuide.</a>
   </div>
 </footer>
 
