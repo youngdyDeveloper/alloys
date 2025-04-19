@@ -258,11 +258,11 @@ nav ul li a {
   justify-content: space-between;
   display: flex;
 }
-.logo h3{
+.logo h4{
   padding-left: 30px;
   padding-top: 15px;
   color: white;
-
+  font-size: 20px;
 }
 
 .logo img {
