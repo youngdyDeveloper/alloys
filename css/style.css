@@ -212,7 +212,7 @@ p {
 
 nav {
   position: fixed;
-   background-color:#004085;
+   background:#597BD9;
   z-index: 1000;
   width: 100%;
  padding: 10px;
@@ -255,11 +255,19 @@ nav ul li a {
 .logo {
   float: left;
   padding-left: -100px;
+  justify-content: space-between;
+  display: flex;
+}
+.logo h3{
+  padding-left: 30px;
+  padding-top: 15px;
+  color: white;
+
 }
 
 .logo img {
-  width: 250px;
-  height: 50px;
+  width: 130%;
+  height: 60px;
 }
 
 .responsive {
@@ -275,10 +283,40 @@ nav ul li a {
 /*  Header
 /*-----------------------------------------------------------------------------------*/
 
-#header {
-  background: url("../images/top4.jpg") repeat scroll center center / cover;
-  height: 95vh;
+
+#header.home {
+  position: relative;
+  background: url("../images/top4.jpg") center center / cover no-repeat;
+  height: 100vh;
+  color: white;
+  overflow: hidden;
+}
+
+#header.home .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Hii ndiyo opacity ya black */
+  z-index: 1;
+}
+
+#header.home * {
+  position: relative;
+  z-index: 2;
+}
+
+#header .container {
+  position: relative;
+  z-index: 2; /* Ensures text appears above the overlay */
+  padding-top: 100px;
+}
+
+#header {
+    background: url("../images/top4.jpg") repeat scroll center center / cover;
+  width: 100%;
+  height:300px;
    background-color: rgba(255, 0, 0, 0.8);
     color: black;
     padding: 10px;
@@ -291,12 +329,12 @@ nav ul li a {
 
 #header .header-content {
   height: 100vh;
-  text-align: left;
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
+
 
 .header-content h3 {
   font-size: 40px;
