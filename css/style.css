@@ -87,6 +87,7 @@ nav ul li a {
   transition: all 0.5s ease-in-out 0s;
 }
 
+
 p {
   margin: 25px 0;
   padding: 0;
@@ -212,7 +213,7 @@ p {
 
 nav {
   position: fixed;
-   background:#597BD9;
+   background:#D2042D;
   z-index: 1000;
   width: 100%;
  padding: 10px;
@@ -229,6 +230,7 @@ nav {
 }
 
 nav ul li {
+  
   float: left;
   margin-right: 15px;
   font-family: 'Poppins', sans-serif;
@@ -287,6 +289,7 @@ nav ul li a {
 #header.home {
   position: relative;
   background: url("../images/top4.jpg") center center / cover no-repeat;
+  background-color: rgba(0, 0, 0, 0.7);
   height: 100vh;
   color: white;
   overflow: hidden;
@@ -503,7 +506,6 @@ nav ul li a {
   margin: 0 40px 0 0;
   float: left;
   font-size: 14px;
-  color: #999999;
   line-height: 16px;
   cursor: pointer;
   font-family: 'Poppins', helvetica;
@@ -516,6 +518,7 @@ nav ul li a {
   -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
 }
+
 
 
 #portfolio .portfolio-list .nav li:hover, #portfolio .portfolio-list .nav li.filter-active  {
