@@ -257,25 +257,51 @@ nav ul li a {
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
-
 .logo {
   float: left;
   margin-left: -50px;
   justify-content: space-between;
   display: flex;
+  align-items: center;
 }
-.logo h6{
+
+.logo h6 {
   padding-left: 30px;
   padding-top: 15px;
   color: white;
+  margin: 0;
 }
 
 .logo img {
   width: 130%;
   height: 40px;
   padding-left: 30px;
-
 }
+
+.short-name {
+  display: none;
+}
+
+/* Media Query for small screens (e.g., max-width: 600px) */
+@media screen and (max-width: 600px) {
+  .full-name {
+    display: none;
+  }
+
+  .short-name {
+    display: inline;
+  }
+
+  .logo img {
+    width: 100px; /* Optional: reduce image size on mobile */
+  }
+
+  .logo h6 {
+    font-size: 12px; /* Optional: make font smaller on mobile */
+    padding-left: 10px;
+  }
+}
+
 
 .responsive {
   display: none;
