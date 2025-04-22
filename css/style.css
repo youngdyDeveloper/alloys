@@ -260,7 +260,7 @@ nav ul li a {
 
 .logo {
   float: left;
-  margin-left: -100px;
+  margin-left: -50px;
   justify-content: space-between;
   display: flex;
 }
@@ -268,7 +268,6 @@ nav ul li a {
   padding-left: 30px;
   padding-top: 15px;
   color: white;
-  font-size: 20px;
 }
 
 .logo img {
