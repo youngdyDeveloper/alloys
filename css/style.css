@@ -87,6 +87,10 @@ nav ul li a {
   transition: all 0.5s ease-in-out 0s;
 }
 
+.row1{
+  margin-left:50%;
+}
+
 
 p {
   margin: 25px 0;
@@ -256,11 +260,11 @@ nav ul li a {
 
 .logo {
   float: left;
-  padding-left: -100px;
+  margin-left: -100px;
   justify-content: space-between;
   display: flex;
 }
-.logo h4{
+.logo h6{
   padding-left: 30px;
   padding-top: 15px;
   color: white;
@@ -270,6 +274,8 @@ nav ul li a {
 .logo img {
   width: 130%;
   height: 40px;
+  padding-left: 30px;
+
 }
 
 .responsive {
